@@ -1,0 +1,78 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "b",
+						"type": "uint256"
+					}
+				],
+				"name": "add",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/library.sol": "CalcTest"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/library.sol": {
+			"keccak256": "0x11809c47dca8d3ade5bac5f0bf412c70539d17584aaefd9d1798bb1e7fb586b0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6e42abf0bc4f0400fb3ccd5b4ee24258267092e96e63700a5552152232f1dcc3",
+				"dweb:/ipfs/QmVno1oLD3mWn6aSVm4bh9nb53goM9vn38vibib6hKKNLo"
+			]
+		},
+		"contracts/mathLib.sol": {
+			"keccak256": "0xc826c9b4d807c1140039626fdef0ff3c51cecf2ec25ddd40dcd8eafa0d25e1d3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3072c28e0510529a91f7f4896c4287131fc395b14751bdb0cb38d787c293dab3",
+				"dweb:/ipfs/QmZBGMdztxMhp4rCtkGPBeNqhaB66eyEvKpowzYyPuiyWC"
+			]
+		}
+	},
+	"version": 1
+}

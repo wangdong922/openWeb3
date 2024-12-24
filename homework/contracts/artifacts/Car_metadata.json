@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "drive",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "speed",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/extendes.sol": "Car"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/extendes.sol": {
+			"keccak256": "0x06595d8fdb9f851fc87dea3b091584ee54fc540640678a32d623499ceb311b2a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e0f0fec4846c218ae24dad864456915dedf293adfe89e73041aa87d268139e9b",
+				"dweb:/ipfs/QmYo43NfnwVN8Mi7Fz7E7xwhHmyX1P5vqE5ahBVJe8BsbY"
+			]
+		}
+	},
+	"version": 1
+}

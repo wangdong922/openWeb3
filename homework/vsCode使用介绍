@@ -1,0 +1,6 @@
+1、创建一个文件夹： mkdir hardhat-project
+2、cd到创建的文件夹，npm init；然后安装hardhat：npm install --save-dev hardhat(在VS终端自执行不了则以管理员运行cmd)
+3、用hardhat 创建示例项目： npx hardhat init
+4、编译合约：npx hardhat compile，完成后在artifacts文件夹中查询编译后的json文件
+5、启动本地网络：npx hardhat node
+6、部署合约。运行： npx hardhat ignition deploy ./ignition/modules/Lock.js --network localhost

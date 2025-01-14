@@ -1,0 +1,75 @@
+1、什么情况下应该使用 uint 或 int?
+当需要存储整数时，uint(无符号整数)，int(有符号整数)，uint适用于不允许负值的场景
+uint256 public totalSupply;
+int256 public balance;
+2、如何选择存储以太坊地址使用的数据结构？
+使用address
+address public addr;
+3、在何时使用 string 与 bytes?
+当存储可变长度的文本数据时使用string，当处理不需要字符编码的原始字节数据时使用bytes
+string public name;
+bytes32 public hash;
+4、数组在 Solidity 中的应用场景是什么？
+存储相同类型的数据，适用于存储多个值的情况
+uint256[] public numbers;
+5、为何以及如何使用 mapping?
+mapping用于存储键值对的映射，用于存储关联数据，比如用户余额
+mapping(address => uint256) public balances;
+6、struct 的用途及实例?
+用于存储不同数据类型的复杂结构
+struct Person {
+      string name;
+      uint age;
+}
+7、何时使用 enum 以及其好处是什么？
+一组常量，适用于有限选项的情况
+enum Status {
+    Success,
+    fail
+}
+8、在设计合约时如何考虑存储和 Gas 成本？
+选择高效的数据结构，mapping比数据更节省gas费，特别是在大规模数据查找时
+9、如何根据数据访问模式选择数据结构？
+频繁变动的数据选择mapping，静态或者顺序访问的数据选择数组
+10、在复杂合约中选择数据结构的考虑因素有哪些？
+评估合约的功能需求，选择可以支持这些功能的数据结构，复杂合约可能需要不同的数据结构，结合struct、mapping使用
+11、如何决定使用固定长度的数组还是动态数组？
+如果事先知道数据的长度，并且长度不再发生变化，则使用固定长度的数据，否则使用动态数组；
+uint256[10] public arrs;
+uint256 public arrs;
+12、在 Solidity 中使用 mapping 和 array 的主要区别及使用场景是什么？
+mapping适用于快速查找可更行，适合存储用户余额等场景，array适用于元素顺序重要并且需要迭代的场景；
+mapping(address => uint256) public balances;
+address[] public userList;
+13、如何利用 struct 在 Solidity 中模拟传统的数据库表？
+struct Employee {
+    uint256 id;
+    string name;
+    uint256 age;
+}
+mapping(uint256 => Employee) public emplyees;
+14、 Solidity 中 enum 如何帮助降低错误的发生？
+限制变量的取值范围，减少非法输入
+15、为何 bytes 类型有时比 string 更优？
+处理不需要字符处理功能的二进制数据时，bytes更节省空间以及gas费
+16、如何选择在 Solidity 中存储时间的最佳数据结构？
+使用uint256存储时间戳，因为可以直接和EVM虚拟机的时间函数兼容
+17、在 Solidity 合约中，何时应考虑将数据封装在 struct 内部？
+当数据项逻辑上属于同一实体或需要一起处理时
+18、mapping 类型是否支持迭代？如果不支持，如何解决？
+不支持迭代，将mapping的key单独维护一个数组，然后通过迭代数组来访问mapping
+19、在设计一个包含多种资产类型的钱包合约时，应使用哪种数据结构？
+使用mapping
+mapping(address => mapping(address => uint256)) public balances;
+20、使用 enum 定义状态时，应如何处理状态的转换逻辑？
+定义状态转换的函数中应包含状态验证逻辑，确保合约状态按预定流程转换。
+enum Stage { Init, Running, Ended }
+Stage public stage = Stage.Init;
+function nextStage() public {
+    if (stage == Stage.Init) {
+        stage = Stage.Running;
+    } else if (stage == Stage.Running) {
+        stage = Stage.Ended;
+    }
+}
+
